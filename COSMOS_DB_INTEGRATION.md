@@ -35,10 +35,11 @@ Add the following to your `.env` file:
 
 ```plaintext
 # Cosmos DB Configuration
-COSMOS_ENDPOINT="https://calpersdb.documents.azure.com:443/"
-COSMOS_KEY="QFvboG0XEU1zEEhuF6Xr0cPChQ21FhU5fGLFWwdRjnccbgjYhcSCFDLFunnNw1N9pIeuOheJQ92mACDbktP20A=="
-COSMOS_DATABASE_NAME="AgentLogsDB"
-COSMOS_CONTAINER_NAME="ThreadLogs"
+AZURE_AGENT_ID=
+AZURE_ENDPOINT=
+AZURE_TENANT_ID=
+COSMOS_ENDPOINT=
+COSMOS_KEY=
 ```
 
 ### Cosmos DB Setup
