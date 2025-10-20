@@ -20,10 +20,16 @@
                         <p class="agent-status">Online • Ready to help with your expense questions</p>
                     </div>
                 </div>
-                <button class="new-chat-btn" id="newChatBtn">
-                    <i class="fas fa-plus"></i>
-                    New Chat
-                </button>
+                <div class="header-actions">
+                    <button class="logs-btn" id="logsBtn" title="View Thread Logs">
+                        <i class="fas fa-list-alt"></i>
+                        Logs
+                    </button>
+                    <button class="new-chat-btn" id="newChatBtn">
+                        <i class="fas fa-plus"></i>
+                        New Chat
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -56,6 +62,57 @@
                     <small>Press Enter to send • <span id="charCount">0</span>/1000 characters</small>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <!-- Logs Panel -->
+    <div class="logs-panel" id="logsPanel">
+        <div class="logs-header">
+            <h2>
+                <i class="fas fa-list-alt"></i>
+                Agent Thread Logs
+            </h2>
+            <button class="close-logs-btn" id="closeLogsBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="logs-info" id="logsInfo">
+            <div class="info-item">
+                <span class="info-label">Thread ID:</span>
+                <span class="info-value" id="threadId">N/A</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Total Messages:</span>
+                <span class="info-value" id="totalMessages">0</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Source:</span>
+                <select id="logSource" class="log-source-select">
+                    <option value="agent">Agent (Live)</option>
+                    <option value="cosmos">Cosmos DB</option>
+                </select>
+            </div>
+            <button class="refresh-logs-btn" id="refreshLogsBtn">
+                <i class="fas fa-sync-alt"></i>
+                Refresh
+            </button>
+        </div>
+        <div class="cosmos-stats" id="cosmosStats">
+            <div class="stats-toggle">
+                <button class="stats-btn" id="statsBtn">
+                    <i class="fas fa-database"></i>
+                    Cosmos DB Stats
+                </button>
+            </div>
+            <div class="stats-content" id="statsContent" style="display: none;">
+                <div class="stats-loading">Loading stats...</div>
+            </div>
+        </div>
+        <div class="logs-content" id="logsContent">
+            <div class="logs-empty">
+                <i class="fas fa-inbox"></i>
+                <p>No logs available yet. Start a conversation to see thread logs.</p>
+            </div>
         </div>
     </div>
 
