@@ -76,10 +76,7 @@ else:
 # up the managed identity token.  The `AIProjectClient` holds the connection to
 # the Azure AI service, and we can reuse it across requests because it is
 # thread-safe for basic operations.
-azure_tenant_id = os.getenv("AZURE_TENANT_ID")
-credential = DefaultAzureCredential(
-    tenant_id=azure_tenant_id
-) if azure_tenant_id else DefaultAzureCredential()
+credential = DefaultAzureCredential()
 
 project = AIProjectClient(
     credential=credential,
